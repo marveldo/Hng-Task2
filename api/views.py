@@ -44,7 +44,7 @@ class AboutUserview(APIView):
            temp = self.get_weather(city)
            res = {'client_ip' : ip,
                'location' : city,
-               'greeting': f'hello {name}! the temperature is {self.convert_to_celsius(temp)} in {city}'
+               'greeting': f'hello {name}! the temperature is {self.convert_to_celsius(temp)} celsius in {city}'
         
                }
            return Response(res, status=status.HTTP_200_OK)
